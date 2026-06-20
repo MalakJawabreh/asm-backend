@@ -1,12 +1,12 @@
 import express from "express";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
 import emailRoutes from "./routes/emailRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import postRoutes from "./routes/postRoutes.js"; // <-- مهم جدًا
 import mongoose from "mongoose";
 import cors from "cors";
 
-// dotenv.config();
+dotenv.config();
 const app = express();
 app.use(
   cors({
