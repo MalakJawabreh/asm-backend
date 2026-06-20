@@ -8,8 +8,11 @@ import cors from "cors";
 
 // dotenv.config();
 const app = express();
-app.use(cors());
-
+app.use(
+  cors({
+    origin: "https://www.asmdesignco.com",
+  }),
+);
 app.use(express.json());
 mongoose
   .connect(process.env.MONGO_URI) // بس خليها هيك بدون أي خيارات إضافية
